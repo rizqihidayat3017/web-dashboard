@@ -4,16 +4,16 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import PageNotFound from './component/Errorpage/PageNotFound.jsx'
 import Dashboardv2 from './Pages/Dashboardv2.jsx'
-import Invoice from './component/DashboardAdmin/Invoice.jsx'
-import Detailscgr from './component/DashboardAdmin/Detailscgr.jsx'
 import Detailspetani from './Manual/DetailsPetani.jsx'
 import NavbarV2 from './component/DashboardAdmin/NavbarV2.jsx'
 import Signin from './component/Login/Signin.jsx'
-import Petanidetails from './component/DashboardAdmin/Petanidetails.jsx'
 import DetailspengajuanCGRv2 from './Pages/DetailspengajuanCGRv2.jsx'
 import Pengajuancgrv2 from './Pages/Pengajuancgrv2.jsx'
 import DatacgrV2 from './Pages/DatacgrV2.jsx'
 import Contractcgrv2 from './Pages/Contractcgrv2.jsx'
+import DetailsdataCgrv2 from './Pages/DetailsdataCgrv2.jsx'
+import DetailsPetaniv2 from './Pages/DetailsPetaniv2.jsx'
+import Invoicev2 from './Pages/Invoicev2.jsx'
 
 const router = createBrowserRouter([
   {
@@ -43,11 +43,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/invoice',
-    element : <Invoice/>
+    element : <Invoicev2/>
   },
   {
     path: '/detailscgr',
-    element : <Detailscgr/>
+    element : <DetailsdataCgrv2/>
   },
   {
     path: '/detailspetani',
@@ -63,7 +63,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/petanidetails',
-    element : <Petanidetails/>
+    element : <DetailsPetaniv2/>
   },
 ])
 
