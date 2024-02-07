@@ -98,7 +98,7 @@ const Sidebar = ({ children }) => {
           </li>
         </ul>
       </div>
-      <div className="w-full border border-customOrange col-span-10">{children}</div>
+      <div className="w-full border border-customOrangeplus col-span-10">{children}</div>
     </div>
   );
 };
