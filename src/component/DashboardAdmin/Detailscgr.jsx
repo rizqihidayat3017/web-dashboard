@@ -21,7 +21,7 @@ function Detailscgr() {
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
       <div className="align-middle rounded-tl-lg rounded-tr-lg inline-block w-full py-4 overflow-hidden bg-white shadow-lg px-12">
         <div className="flex justify-between">
-          <div className="inline-flex border rounded w-7/12 px-2 lg:px-6 h-12 bg-transparent">
+          <div className="inline-flex border rounded w-full px-2 lg:px-6 h-12 bg-transparent">
             <div className="flex flex-wrap items-stretch w-full h-full mb-6 relative">
               <div className="flex">
                 <span className="flex items-center leading-normal bg-transparent rounded rounded-r-none border border-r-0 border-none lg:px-3 py-2 whitespace-no-wrap text-grey-dark text-sm">
@@ -50,7 +50,7 @@ function Detailscgr() {
               </div>
               <input
                 type="text"
-                className="flex-shrink flex-grow flex-auto leading-normal tracking-wide w-px flex-1 border border-none border-l-0 rounded rounded-l-none px-3 relative focus:outline-none text-xxs lg:text-xs lg:text-base text-gray-500 font-thin"
+                className="flex-shrink flex-grow flex-auto leading-normal tracking-wide w-px border border-none border-l-0 rounded rounded-l-none px-3 relative focus:outline-none text-xxs lg:text-xs  text-gray-500 font-thin"
                 placeholder="Search"
               />
             </div>
@@ -64,45 +64,45 @@ function Detailscgr() {
               <th scope="col" className="px-6 py-3">
                 Nama Lengkap
               </th>
-    <th scope="col" className="px-6 py-3">
-      Kabupaten
-    </th>
-    <th scope="col" className="px-6 py-3">
-      Kecamatan
-    </th>
-    <th scope="col" className="px-6 py-3">
-      No Rekening
-    </th>
-    <th scope="col" className="px-6 py-3">
-      NIK
-    </th>
-    <th scope="col" className="px-6 py-3">
-      No.Customer Code
-    </th>
-    <th scope="col" className="px-6 py-3">
-      No. Vendor
-    </th>
-    <th scope="col" className="px-6 py-3">
-      Technical Service
-    </th>
-    <th scope="col" className="px-6 py-3">
-      Status
-    </th>
-    <th scope="col" className="px-10 py-3">
-      Foto KTP
-    </th>
-    <th scope="col" className="px-10 py-3">
-      Foto NPWP
-    </th>
-    <th scope="col" className="px-10 py-3">
-      Foto Buku Tabungan
-    </th>
-    <th scope="col" className="px-10 py-3">
-      Foto CGR
-    </th>
-    <th scope="col" className="px-6 py-3">
-      Polygon
-    </th>
+              <th scope="col" className="px-6 py-3">
+                Kabupaten
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Kecamatan
+              </th>
+              <th scope="col" className="px-6 py-3">
+                No Rekening
+              </th>
+              <th scope="col" className="px-6 py-3">
+                NIK
+              </th>
+              <th scope="col" className="px-6 py-3">
+                No.Customer Code
+              </th>
+              <th scope="col" className="px-6 py-3">
+                No. Vendor
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Technical Service
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Status
+              </th>
+              <th scope="col" className="px-10 py-3">
+                Foto KTP
+              </th>
+              <th scope="col" className="px-10 py-3">
+                Foto NPWP
+              </th>
+              <th scope="col" className="px-10 py-3">
+                Foto Buku Tabungan
+              </th>
+              <th scope="col" className="px-10 py-3">
+                Foto CGR
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Polygon
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -117,69 +117,69 @@ function Detailscgr() {
                 >
                   {item.namaLengkap}
                 </th>
-    <td className="px-6 py-4">{item.kabupaten}</td>
-    <td className="px-6 py-4">{item.kecamatan}</td>
-    <td className="px-6 py-4">{item.noRekening}</td>
-    <td className="px-6 py-4">{item.nik}</td>
-    <td className="px-6 py-4">{item.noCustomerCode}</td>
-    <td className="px-6 py-4">{item.noVendor}</td>
-    <td className="px-6 py-4">{item.technicalService}</td>
-    <td className="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">
-      <span className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-        <span
-          aria-hidden
-          className={`absolute inset-0 bg-${
-            item.status === "active" ? "green" : "red"
-          }-200 opacity-50 rounded-full`}
-        />
-        <span className="relative text-xs">{item.status}</span>
-      </span>
-    </td>
-    <td className="px-6 py-4">
-      <div>
-        <img
-          className="h-16 w-16 rounded-lg"
-          src={item.fotoKTPSrc}
-          alt=""
-        />
-      </div>
-    </td>
-    <td className="px-6 py-4">
-      <div>
-        <img
-          className="h-16 w-16 rounded-lg"
-          src={item.fotoNPWPSrc}
-          alt=""
-        />
-      </div>
-    </td>
-    <td className="px-6 py-4">
-      <div>
-        <img
-          className="h-16 w-16 rounded-lg"
-          src={item.fotoBukuTabunganSrc}
-          alt=""
-        />
-      </div>
-    </td>
-    <td className="px-6 py-4">
-      <div>
-        <img
-          className="h-16 w-16 rounded-lg"
-          src={item.fotoCGRSrc}
-          alt=""
-        />
-      </div>
-    </td>
-    <td className="px-6 py-4">
-      <div>
-        <img
-          className="h-16 w-16 rounded-lg"
-          src={item.polygonSrc}
-          alt=""
-        />
-      </div>
-    </td>
+                <td className="px-6 py-4">{item.kabupaten}</td>
+                <td className="px-6 py-4">{item.kecamatan}</td>
+                <td className="px-6 py-4">{item.noRekening}</td>
+                <td className="px-6 py-4">{item.nik}</td>
+                <td className="px-6 py-4">{item.noCustomerCode}</td>
+                <td className="px-6 py-4">{item.noVendor}</td>
+                <td className="px-6 py-4">{item.technicalService}</td>
+                <td className="px-6 py-4 whitespace-no-wrap border-b text-blue-900 border-gray-500 text-sm leading-5">
+                  <span className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
+                    <span
+                      aria-hidden
+                      className={`absolute inset-0 bg-${
+                        item.status === "active" ? "green" : "red"
+                      }-200 opacity-50 rounded-full`}
+                    />
+                    <span className="relative text-xs">{item.status}</span>
+                  </span>
+                </td>
+                <td className="px-6 py-4">
+                  <div>
+                    <img
+                      className="h-16 w-16 rounded-lg"
+                      src={item.fotoKTPSrc}
+                      alt=""
+                    />
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  <div>
+                    <img
+                      className="h-16 w-16 rounded-lg"
+                      src={item.fotoNPWPSrc}
+                      alt=""
+                    />
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  <div>
+                    <img
+                      className="h-16 w-16 rounded-lg"
+                      src={item.fotoBukuTabunganSrc}
+                      alt=""
+                    />
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  <div>
+                    <img
+                      className="h-16 w-16 rounded-lg"
+                      src={item.fotoCGRSrc}
+                      alt=""
+                    />
+                  </div>
+                </td>
+                <td className="px-6 py-4">
+                  <div>
+                    <img
+                      className="h-16 w-16 rounded-lg"
+                      src={item.polygonSrc}
+                      alt=""
+                    />
+                  </div>
+                </td>
               </tr>
             ))}
           </tbody>

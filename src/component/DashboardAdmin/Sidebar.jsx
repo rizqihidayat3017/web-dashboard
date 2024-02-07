@@ -1,14 +1,13 @@
 const handleLogout = () => {
   localStorage.removeItem('email');
   localStorage.removeItem('password');
-  window.location.href = "/signin"
-
-}
+  window.location.href = '/signin';
+};
 // eslint-disable-next-line react/prop-types
 const Sidebar = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-row bg-gray-100">
-      <div className="flex flex-col w-80 bg-white overflow-hidden">
+    <div className="min-h-screen grid grid-cols-12 bg-gray-100 overflow-hidden">
+      <div className="flex flex-col  bg-white col-span-2">
         <ul className="flex flex-col">
           <li>
             <a
@@ -88,18 +87,18 @@ const Sidebar = ({ children }) => {
             </a>
           </li>
           <li>
-            <a
-              className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
-            >
+            <a className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
                 <i className="bx bx-log-out" />
               </span>
-              <span className="text-sm font-medium" onClick={handleLogout}>Logout</span>
+              <span className="text-sm font-medium" onClick={handleLogout}>
+                Logout
+              </span>
             </a>
           </li>
         </ul>
       </div>
-      <div>{children}</div>
+      <div className="w-full border border-customOrange col-span-10">{children}</div>
     </div>
   );
 };

@@ -44,7 +44,7 @@ function Contractcgr() {
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg w-full">
       <div className="align-middle rounded-tl-lg rounded-tr-lg inline-block w-full py-4 overflow-hidden bg-white shadow-lg px-12">
         <div className="flex justify-between">
-          <div className="inline-flex border rounded w-7/12 px-2 lg:px-6 h-12 bg-transparent">
+          <div className="inline-flex border rounded w-full px-2 lg:px-6 h-12 bg-transparent">
             <div className="flex flex-wrap items-stretch w-full h-full mb-6 relative">
               <div className="flex">
                 <span className="flex items-center leading-normal bg-transparent rounded rounded-r-none border border-r-0 border-none lg:px-3 py-2 whitespace-no-wrap text-grey-dark text-sm">
@@ -73,7 +73,7 @@ function Contractcgr() {
               </div>
               <input
                 type="text"
-                className="flex-shrink flex-grow flex-auto leading-normal tracking-wide w-px flex-1 border border-none border-l-0 rounded rounded-l-none px-3 relative focus:outline-none text-xxs lg:text-xs lg:text-base text-gray-500 font-thin"
+                className="flex-shrink flex-grow flex-auto leading-normal tracking-wide w-px border border-none border-l-0 rounded rounded-l-none px-3 relative focus:outline-none text-xxs lg:text-xs  text-gray-500 font-thin"
                 placeholder="Search"
               />
             </div>
