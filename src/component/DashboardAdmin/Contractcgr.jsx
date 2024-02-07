@@ -7,9 +7,6 @@ function Contractcgr() {
       status: "active",
       linkDetails: "/petanidetails",
       linkContract: "/invoice",
-      contoh: "hehe",
-      contoh1: "hehe",
-      contoh2: "hehe",
     },
     {
       nama: "Rizqi Hidayat",

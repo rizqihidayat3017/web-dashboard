@@ -12,8 +12,8 @@ import Signin from './component/Login/Signin.jsx'
 import Petanidetails from './component/DashboardAdmin/Petanidetails.jsx'
 import DetailspengajuanCGRv2 from './Pages/DetailspengajuanCGRv2.jsx'
 import Pengajuancgrv2 from './Pages/Pengajuancgrv2.jsx'
-import DatacgrV2 from './Pages/DatacgrV2.jsx'
-import Contractcgrv2 from './Pages/Contractcgrv2.jsx'
+import Datacgr from './component/DashboardAdmin/Datacgr.jsx'
+import Contractcgr from './component/DashboardAdmin/Contractcgr.jsx'
 
 const router = createBrowserRouter([
   {
@@ -35,11 +35,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/datacgrv2',
-    element : <DatacgrV2/>
+    element : <Datacgr/>
   },
   {
     path: '/contractcgrv2',
-    element : <Contractcgrv2/>
+    element : <Contractcgr/>
   },
   {
     path: '/invoice',
