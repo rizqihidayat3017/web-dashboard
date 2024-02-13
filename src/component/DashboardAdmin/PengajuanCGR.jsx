@@ -53,7 +53,7 @@ function PengajuanCGR() {
     // Masukkan data pengajuan lainnya di sini jika ada
   ];
   return (
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <div>
       <div className="align-middle rounded-tl-lg rounded-tr-lg inline-block w-full py-4 overflow-hidden bg-white shadow-lg px-12">
         <div className="flex justify-between">
           <div className="inline-flex border rounded w-full px-2 lg:px-6 h-12 bg-transparent">
@@ -92,7 +92,7 @@ function PengajuanCGR() {
           </div>
         </div>
       </div>
-      <div>
+      <div className="w-full overflow-x-scroll">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>

@@ -41,7 +41,7 @@ function Contractcgr() {
     // Tambahkan data kontrak lainnya di sini sesuai kebutuhan
   ];
   return (
-    <div className="relative overflow-x-auto shadow-md sm:rounded-lg w-full">
+    <div>
       <div className="align-middle rounded-tl-lg rounded-tr-lg inline-block w-full py-4 overflow-hidden bg-white shadow-lg px-12">
         <div className="flex justify-between">
           <div className="inline-flex border rounded w-full px-2 lg:px-6 h-12 bg-transparent">
@@ -80,62 +80,64 @@ function Contractcgr() {
           </div>
         </div>
       </div>
-      <table className="w-full justify-items-center text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-          <tr>
-            <th scope="col" className="px-6 py-3">
-              Nama CGR
-            </th>
-            <th scope="col" className="px-6 py-3">
-              Status
-            </th>
-            <th scope="col" className="px-6 py-3">
-              Details Petani
-            </th>
-            <th scope="col" className="px-6 py-3">
-              Contract
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {contracts.map((contract, index) => (
-            <tr
-              key={index}
-              className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-            >
-              <th
-                scope="row"
-                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                {contract.nama}
+      <div className="w-full overflow-x-scroll">
+        <table className="w-full justify-items-center text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+              <th scope="col" className="px-6 py-3">
+                Nama CGR
               </th>
-              <td className="px-6 py-4">
-                <span className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                  <span
-                    aria-hidden
-                    className="absolute inset-0 bg-green-200 opacity-50 rounded-full"
-                  />
-                  <span className="relative text-xs">{contract.status}</span>
-                </span>
-              </td>
-              <td className="px-6 py-4">
-                <Link to={contract.linkDetails}>
-                  <button className="px-5 py-2 border-customOrange border text-customOrange rounded transition duration-300 hover:bg-customOrange hover:text-white focus:outline-none">
-                    Details Petani
-                  </button>
-                </Link>
-              </td>
-              <td className="px-6 py-4">
-                <Link to={contract.linkContract}>
-                  <button className="px-5 py-2 border-customOrange border text-customOrange rounded transition duration-300 hover:bg-customOrange hover:text-white focus:outline-none">
-                    Download Contract
-                  </button>
-                </Link>
-              </td>
+              <th scope="col" className="px-6 py-3">
+                Status
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Details Petani
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Contract
+              </th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {contracts.map((contract, index) => (
+              <tr
+                key={index}
+                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+              >
+                <th
+                  scope="row"
+                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                >
+                  {contract.nama}
+                </th>
+                <td className="px-6 py-4">
+                  <span className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
+                    <span
+                      aria-hidden
+                      className="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                    />
+                    <span className="relative text-xs">{contract.status}</span>
+                  </span>
+                </td>
+                <td className="px-6 py-4">
+                  <Link to={contract.linkDetails}>
+                    <button className="px-5 py-2 border-customOrange border text-customOrange rounded transition duration-300 hover:bg-customOrange hover:text-white focus:outline-none">
+                      Details Petani
+                    </button>
+                  </Link>
+                </td>
+                <td className="px-6 py-4">
+                  <Link to={contract.linkContract}>
+                    <button className="px-5 py-2 border-customOrange border text-customOrange rounded transition duration-300 hover:bg-customOrange hover:text-white focus:outline-none">
+                      Download Contract
+                    </button>
+                  </Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

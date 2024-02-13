@@ -6,7 +6,7 @@ export default {
       colors: {
         customOrange: "#F37921",
         customWhite: "#ffffff",
-        customOrangeplus : "#E26310"
+        customOrangeplus: "#E26310",
       },
     },
   },
