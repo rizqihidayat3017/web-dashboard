@@ -12,7 +12,7 @@ function NavbarV2() {
   };
 
   return (
-    <nav className="bg-customOrange border-gray-200 dark:bg-gray-900 shadow-md">
+    <nav className="bg-customOrange border-gray-200 dark:bg-gray-900 shadow-md sticky top-0 z-50">
       <div className="flex justify-between ml-2">
         <div className="flex">
           <div className="h-12 w-12 pt-2">
@@ -66,7 +66,7 @@ function NavbarV2() {
               </button>
               {isOpen && (
                 <ul
-                  className="absolute -right-5 top-14 h-20 w-56 border-customOrange bg-white rounded-lg"
+                  className="absolute -right-5 top-14 h-20 w-56 border-customOrange bg-white rounded-lg z-50"
                   aria-labelledby="user-menu-button"
                 >
                   <span className="block text-sm text-gray-900">{email}</span>

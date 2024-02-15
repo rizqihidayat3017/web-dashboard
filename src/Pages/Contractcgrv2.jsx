@@ -4,7 +4,7 @@ import Sidebar from "../component/DashboardAdmin/Sidebar";
 
 function Contractcgrv2() {
   return (
-    <div>
+    <div className="h-screen">
       <NavbarV2 />
       <Sidebar>
         <Contractcgr/>

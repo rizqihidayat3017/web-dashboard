@@ -1,10 +1,13 @@
+import { usePDF } from 'react-to-pdf';
+
 function Invoice() {
+  const { toPDF, targetRef } = usePDF({filename: 'contract.pdf'});
   return (
     <div>
       <div className="max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto my-4 sm:my-10">
         <div className="sm:w-11/12 lg:w-3/4 mx-auto">
           {/* Card */}
-          <div className="flex flex-col p-4 sm:p-10 bg-white shadow-md rounded-xl dark:bg-gray-800">
+          <div className="flex flex-col p-4 sm:p-10 bg-white shadow-md rounded-xl dark:bg-gray-800" ref={targetRef}>
             {/* Grid */}
             <div className="flex justify-between">
               <div>
@@ -297,9 +300,9 @@ function Invoice() {
               </svg>
               Invoice PDF
             </a>
-            <a
+            <button
               className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-              href="#"
+              onClick={() => toPDF()}
             >
               <svg
                 className="flex-shrink-0 w-4 h-4"
@@ -318,7 +321,7 @@ function Invoice() {
                 <rect width={12} height={8} x={6} y={14} />
               </svg>
               Print
-            </a>
+            </button>
           </div>
           {/* End Buttons */}
         </div>
