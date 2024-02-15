@@ -6,7 +6,7 @@ const handleLogout = () => {
 // eslint-disable-next-line react/prop-types
 const Sidebar = ({ children }) => {
   return (
-    <div className="h-[86vh] grid grid-cols-12 bg-gray-100 overflow-hidden ">
+    <div className="h-[95vh] grid grid-cols-12 bg-gray-100 overflow-hidden ">
       <div className="hidden sm:flex flex-col bg-white col-span-2">
         <ul className="flex flex-col">
           <li>

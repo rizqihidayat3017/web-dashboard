@@ -14,6 +14,7 @@ import Contractcgrv2 from './Pages/Contractcgrv2.jsx'
 import DetailsdataCgrv2 from './Pages/DetailsdataCgrv2.jsx'
 import DetailsPetaniv2 from './Pages/DetailsPetaniv2.jsx'
 import Invoicev2 from './Pages/Invoicev2.jsx'
+import Econtract from './component/DashboardAdmin/Econtract.jsx'
 
 const router = createBrowserRouter([
   {
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
   {
     path: '/petanidetails',
     element : <DetailsPetaniv2/>
+  },
+  {
+    path: '/coba',
+    element : <Econtract/>
   },
 ])
 
