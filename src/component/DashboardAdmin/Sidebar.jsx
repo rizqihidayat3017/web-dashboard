@@ -6,7 +6,7 @@ const handleLogout = () => {
 // eslint-disable-next-line react/prop-types
 const Sidebar = ({ children }) => {
   return (
-    <div className="h-[95vh] grid grid-cols-12 bg-gray-100 overflow-hidden ">
+    <div className="h-[85vh] grid grid-cols-12 bg-gray-100 overflow-hidden ">
       <div className="hidden sm:flex flex-col bg-white col-span-2">
         <ul className="flex flex-col">
           <li>
@@ -77,13 +77,13 @@ const Sidebar = ({ children }) => {
           </li>
           <li>
             <a
-              href="/invoice"
+              href="/coba3"
               className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
             >
               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
                 <i className="bx bx-bell" />
               </span>
-              <span className="text-sm font-medium">Memo pemotongan</span>
+              <span className="text-sm font-medium">E-contract</span>
             </a>
           </li>
           <li>

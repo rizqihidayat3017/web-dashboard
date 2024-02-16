@@ -16,6 +16,7 @@ import DetailsPetaniv2 from './Pages/DetailsPetaniv2.jsx'
 import Invoicev2 from './Pages/Invoicev2.jsx'
 import Econtract from './component/DashboardAdmin/Econtract.jsx'
 import A4kertas from './component/DashboardAdmin/A4kertas.jsx'
+import EcontractA4 from './Pages/EcontractA4.jsx'
 
 const router = createBrowserRouter([
   {
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
   {
     path: '/coba2',
     element : <A4kertas/>
+  },
+  {
+    path: '/coba3',
+    element : <EcontractA4/>
   },
 ])
 
