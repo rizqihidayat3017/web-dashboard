@@ -17,6 +17,9 @@ import Invoicev2 from './Pages/Invoicev2.jsx'
 import Econtract from './component/DashboardAdmin/Econtract.jsx'
 import A4kertas from './component/DashboardAdmin/A4kertas.jsx'
 import EcontractA4 from './Pages/EcontractA4.jsx'
+import ActivityDemsprey from './Pages/ActivityDemsprey.jsx'
+import Demspray from './component/DashboardAdmin/Demspray.jsx'
+import AktivitasTanam from './component/DashboardAdmin/AktivitasTanam.jsx'
 
 const router = createBrowserRouter([
   {
@@ -79,6 +82,18 @@ const router = createBrowserRouter([
   {
     path: '/coba3',
     element : <EcontractA4/>
+  },
+  {
+    path: '/cobademsprey',
+    element : <Demspray/>
+  },
+  {
+    path: '/demsprey',
+    element : <ActivityDemsprey/>
+  },
+  {
+    path: '/aktivitastanam',
+    element : <AktivitasTanam/>
   },
 ])
 

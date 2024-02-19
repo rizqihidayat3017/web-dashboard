@@ -174,7 +174,7 @@ function Invoice() {
                 <polyline points="7 10 12 15 17 10" />
                 <line x1={12} x2={12} y1={15} y2={3} />
               </svg>
-              Invoice PDF
+              Print
             </a>
             <button
               className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
@@ -196,7 +196,7 @@ function Invoice() {
                 <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
                 <rect width={12} height={8} x={6} y={14} />
               </svg>
-              Print
+              Unduh PDF
             </button>
           </div>
           {/* End Buttons */}

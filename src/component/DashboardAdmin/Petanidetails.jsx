@@ -58,7 +58,7 @@ function Petanidetails() {
     // data lainnya
   ];
   return (
-    <div className="overflow-x-auto shadow-md sm:rounded-lg">
+    <div>
       <div className="align-middle rounded-tl-lg rounded-tr-lg inline-block w-full py-4 overflow-hidden bg-white shadow-lg px-12">
         <div className="flex justify-between">
           <div className="inline-flex border rounded w-full px-2 lg:px-6 h-12 bg-transparent">
@@ -97,67 +97,69 @@ function Petanidetails() {
           </div>
         </div>
       </div>
-      <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-          <tr>
-            <th scope="col" className="px-4 py-3">
-              Tecnical Service
-            </th>
-            <th scope="col" className="px-4 py-3">
-              No CGR
-            </th>
-            <th scope="col" className="px-4 py-3">
-              No Contract
-            </th>
-            <th scope="col" className="px-4 py-3">
-              Nama Petani
-            </th>
-            <th scope="col" className="px-4 py-3">
-              Varietas
-            </th>
-            <th scope="col" className="px-4 py-3">
-              Luas Lahan
-            </th>
-            <th scope="col" className="px-4 py-3">
-              Lokasi
-            </th>
-            <th scope="col" className="px-4 py-3">
-              Planning Tanam
-            </th>
-            <th scope="col" className="px-4 py-3">
-              Polygon
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((item, index) => (
-            <tr
-              key={index}
-              className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
-            >
-              <td className="px-4 py-4 whitespace-nowrap text-gray-900 dark:text-white">
-                {item.technicalService}
-              </td>
-              <td className="px-4 py-4">{item.noCGR}</td>
-              <td className="px-4 py-4">{item.noContract}</td>
-              <td className="px-4 py-4">{item.namaPetani}</td>
-              <td className="px-4 py-4">{item.varietas}</td>
-              <td className="px-4 py-4">{item.luasLahan}</td>
-              <td className="px-4 py-4">{item.lokasi}</td>
-              <td className="px-4 py-4">{item.planningTanam}</td>
-              <td className="px-4 py-4">
-                <div>
-                  <img
-                    className="h-16 w-16 rounded-lg"
-                    src={item.polygonSrc}
-                    alt=""
-                  />
-                </div>
-              </td>
+      <div className="w-full overflow-x-scroll">
+        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+              <th scope="col" className="px-4 py-3">
+                Tecnical Service
+              </th>
+              <th scope="col" className="px-4 py-3">
+                No CGR
+              </th>
+              <th scope="col" className="px-4 py-3">
+                No Contract
+              </th>
+              <th scope="col" className="px-4 py-3">
+                Nama Petani
+              </th>
+              <th scope="col" className="px-4 py-3">
+                Varietas
+              </th>
+              <th scope="col" className="px-4 py-3">
+                Luas Lahan
+              </th>
+              <th scope="col" className="px-4 py-3">
+                Lokasi
+              </th>
+              <th scope="col" className="px-4 py-3">
+                Planning Tanam
+              </th>
+              <th scope="col" className="px-4 py-3">
+                Polygon
+              </th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {data.map((item, index) => (
+              <tr
+                key={index}
+                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+              >
+                <td className="px-4 py-4 whitespace-nowrap text-gray-900 dark:text-white">
+                  {item.technicalService}
+                </td>
+                <td className="px-4 py-4">{item.noCGR}</td>
+                <td className="px-4 py-4">{item.noContract}</td>
+                <td className="px-4 py-4">{item.namaPetani}</td>
+                <td className="px-4 py-4">{item.varietas}</td>
+                <td className="px-4 py-4">{item.luasLahan}</td>
+                <td className="px-4 py-4">{item.lokasi}</td>
+                <td className="px-4 py-4">{item.planningTanam}</td>
+                <td className="px-4 py-4">
+                  <div>
+                    <img
+                      className="h-16 w-16 rounded-lg"
+                      src={item.polygonSrc}
+                      alt=""
+                    />
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
