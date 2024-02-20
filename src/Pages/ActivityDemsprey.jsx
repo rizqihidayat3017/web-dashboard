@@ -1,4 +1,4 @@
-import Demspray from "../component/DashboardAdmin/Demspray"
+import Demspray from "../component/DashboardAdmin/Cycle1/Demspray"
 import NavbarV2 from "../component/DashboardAdmin/NavbarV2"
 import Sidebar from "../component/DashboardAdmin/Sidebar"
 

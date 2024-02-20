@@ -18,8 +18,9 @@ import Econtract from './component/DashboardAdmin/Econtract.jsx'
 import A4kertas from './component/DashboardAdmin/A4kertas.jsx'
 import EcontractA4 from './Pages/EcontractA4.jsx'
 import ActivityDemsprey from './Pages/ActivityDemsprey.jsx'
-import Demspray from './component/DashboardAdmin/Demspray.jsx'
-import AktivitasTanam from './component/DashboardAdmin/AktivitasTanam.jsx'
+import Demspray from './component/DashboardAdmin/Cycle1/Demspray.jsx'
+import AktivitasTanam from './component/DashboardAdmin/Cycle1/AktivitasTanam.jsx'
+import DetailAktivitasTanam from './component/DashboardAdmin/Cycle1/DetailAktivitasTanam.jsx'
 
 const router = createBrowserRouter([
   {
@@ -94,6 +95,10 @@ const router = createBrowserRouter([
   {
     path: '/aktivitastanam',
     element : <AktivitasTanam/>
+  },
+  {
+    path: '/cycletanam',
+    element : <DetailAktivitasTanam/>
   },
 ])
 
