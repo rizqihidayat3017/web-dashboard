@@ -21,6 +21,8 @@ import ActivityDemsprey from './Pages/ActivityDemsprey.jsx'
 import Demspray from './component/DashboardAdmin/Cycle1/Demspray.jsx'
 import AktivitasTanam from './component/DashboardAdmin/Cycle1/AktivitasTanam.jsx'
 import DetailAktivitasTanam from './component/DashboardAdmin/Cycle1/DetailAktivitasTanam.jsx'
+import DetailCycle2 from './component/DashboardAdmin/Cycle 2/DetailCycle2.jsx'
+import Cycledua from './component/DashboardAdmin/Cycle 2/Cycledua.jsx'
 
 const router = createBrowserRouter([
   {
@@ -99,6 +101,14 @@ const router = createBrowserRouter([
   {
     path: '/cycletanam',
     element : <DetailAktivitasTanam/>
+  },
+  {
+    path: '/cycle2',
+    element : <Cycledua/>
+  },
+  {
+    path: '/cycle2detail',
+    element : <DetailCycle2/>
   },
 ])
 

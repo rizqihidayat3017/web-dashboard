@@ -57,7 +57,7 @@ function Demspray() {
                 dilakukan pada tahap awal pertumbuhan tanaman jagung setelah
                 tanam.
               </p>
-              <Link>
+              <Link to="/cycle2">
                 <button className="mx-auto mt-5 text-white bg-customOrange border-0 py-2 px-8 focus:outline-none hover:bg-customOrangeplus rounded text-lg">
                   Details
                 </button>

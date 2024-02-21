@@ -1,21 +1,21 @@
 import { Link } from "react-router-dom";
 
-function DetailAktivitasTanam() {
-  const activitasTanam = [
+function DetailCycle2() {
+  const DetailCycle2 = [
     {
       nama: "Rizqi Hidayat",
       status: "Berhasil",
       noContract: "32291023",
-      luasAreapENGAJUAN: "1500 HA",
+      luasArea: "1500 HA",
       tglCycle: "2 Desember 2024",
-      tipeTumbuhan: "BISI-18",
+      tipeTanaman: "BISI-18",
       alamat: "Sepanjang, Sidoarjo",
       luasAreaTanam: "1500 HA",
-      banyakBenih: "1 Ton",
-      pemupukan: "Urea",
+      kematianTanaman: "50%",
+      pengairan: "Ada",
+      pupuk: "ZA",
       catatan: "Aman Terkendali",
       fotoGeotag: "/images/Polygon.png",
-      fotoBenih: "/images/benih.jpg",
       fotoKegiatan: "/images/demplot.jpg",
       fotoKondisiTanam: "/images/kondisilahan.jpg",
       linkDetails: "/demsprey",
@@ -76,13 +76,13 @@ function DetailAktivitasTanam() {
                 Nomor Contract
               </th>
               <th scope="col" className="px-6 py-3">
-                Luas Area Pengajuan
+                Luas Area
               </th>
               <th scope="col" className="px-6 py-3">
                 Tanggal
               </th>
               <th scope="col" className="px-6 py-3">
-                Tipe Tumbuhan
+                Tipe Tanaman
               </th>
               <th scope="col" className="px-6 py-3">
                 Alamat
@@ -91,19 +91,19 @@ function DetailAktivitasTanam() {
                 Luas Area tanam
               </th>
               <th scope="col" className="px-6 py-3">
-                Banyak Benih
+                Kematian tanaman
               </th>
               <th scope="col" className="px-6 py-3">
-                Pemupukan
+                Pengairan
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Pupuk
               </th>
               <th scope="col" className="px-6 py-3">
                 Catatan
               </th>
               <th scope="col" className="px-8 py-3">
                 Foto Geotag
-              </th>
-              <th scope="col" className="px-8 py-3">
-                Foto Bungkus Benih
               </th>
               <th scope="col" className="px-8 py-3">
                 Foto kegiatan
@@ -115,7 +115,7 @@ function DetailAktivitasTanam() {
             </tr>
           </thead>
           <tbody>
-            {activitasTanam.map((contract, index) => (
+            {DetailCycle2.map((detailscycle2, index) => (
               <tr
                 key={index}
                 className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
@@ -124,7 +124,7 @@ function DetailAktivitasTanam() {
                   scope="row"
                   className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  {contract.nama}
+                  {detailscycle2.nama}
                 </th>
                 <td className="px-6 py-4">
                   <span className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
@@ -132,23 +132,26 @@ function DetailAktivitasTanam() {
                       aria-hidden
                       className="absolute inset-0 bg-green-200 opacity-50 rounded-full"
                     />
-                    <span className="relative text-xs">{contract.status}</span>
+                    <span className="relative text-xs">
+                      {detailscycle2.status}
+                    </span>
                   </span>
                 </td>
-                <td className="px-6 py-4">{contract.noContract}</td>
-                <td className="px-6 py-4">{contract.luasAreapENGAJUAN}</td>
-                <td className="px-6 py-4">{contract.tglCycle}</td>
-                <td className="px-6 py-4">{contract.tipeTumbuhan}</td>
-                <td className="px-6 py-4">{contract.alamat}</td>
-                <td className="px-6 py-4">{contract.luasAreaTanam}</td>
-                <td className="px-6 py-4">{contract.banyakBenih}</td>
-                <td className="px-6 py-4">{contract.pemupukan}</td>
-                <td className="px-6 py-4">{contract.catatan}</td>
+                <td className="px-6 py-4">{detailscycle2.noContract}</td>
+                <td className="px-6 py-4">{detailscycle2.luasArea}</td>
+                <td className="px-6 py-4">{detailscycle2.tglCycle}</td>
+                <td className="px-6 py-4">{detailscycle2.tipeTanaman}</td>
+                <td className="px-6 py-4">{detailscycle2.alamat}</td>
+                <td className="px-6 py-4">{detailscycle2.luasAreaTanam}</td>
+                <td className="px-6 py-4">{detailscycle2.kematianTanaman}</td>
+                <td className="px-6 py-4">{detailscycle2.pengairan}</td>
+                <td className="px-6 py-4">{detailscycle2.pupuk}</td>
+                <td className="px-6 py-4">{detailscycle2.catatan}</td>
                 <td className="px-6 py-4">
                   <div>
                     <img
                       className="h-16 w-16 rounded-lg"
-                      src={contract.fotoGeotag}
+                      src={detailscycle2.fotoGeotag}
                       alt=""
                     />
                   </div>
@@ -157,16 +160,7 @@ function DetailAktivitasTanam() {
                   <div>
                     <img
                       className="h-16 w-16 rounded-lg"
-                      src={contract.fotoBenih}
-                      alt=""
-                    />
-                  </div>
-                </td>
-                <td className="px-6 py-4">
-                  <div>
-                    <img
-                      className="h-16 w-16 rounded-lg"
-                      src={contract.fotoKegiatan}
+                      src={detailscycle2.fotoKegiatan}
                       alt=""
                     />
                   </div>
@@ -175,23 +169,23 @@ function DetailAktivitasTanam() {
                   <div className="flex flex-row">
                     <img
                       className="h-16 w-16 rounded-lg mr-2"
-                      src={contract.fotoKondisiTanam}
+                      src={detailscycle2.fotoKondisiTanam}
                       alt=""
                     />
                     <img
                       className="h-16 w-16 rounded-lg mr-2"
-                      src={contract.fotoKondisiTanam}
+                      src={detailscycle2.fotoKondisiTanam}
                       alt=""
                     />
                     <img
                       className="h-16 w-16 rounded-lg"
-                      src={contract.fotoKondisiTanam}
+                      src={detailscycle2.fotoKondisiTanam}
                       alt=""
                     />
                   </div>
                 </td>
                 <td className="pl-44 pr-14 py-4">
-                  <Link to={contract.linkDetails}>
+                  <Link to={detailscycle2.linkDetails}>
                     <button className="px-5 py-2 border-customOrange border text-customOrange rounded transition duration-300 hover:bg-customOrange hover:text-white focus:outline-none">
                       Ubah Jadwal
                     </button>
@@ -206,4 +200,4 @@ function DetailAktivitasTanam() {
   );
 }
 
-export default DetailAktivitasTanam;
+export default DetailCycle2;
