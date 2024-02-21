@@ -23,6 +23,9 @@ import AktivitasTanam from './component/DashboardAdmin/Cycle1/AktivitasTanam.jsx
 import DetailAktivitasTanam from './component/DashboardAdmin/Cycle1/DetailAktivitasTanam.jsx'
 import DetailCycle2 from './component/DashboardAdmin/Cycle 2/DetailCycle2.jsx'
 import Cycledua from './component/DashboardAdmin/Cycle 2/Cycledua.jsx'
+import LoginWithGoogleButton from './component/Login/Login.jsx'
+import Cycle3 from './component/DashboardAdmin/Cycle3/Cycle3.jsx'
+import DetailCycle3 from './component/DashboardAdmin/Cycle3/Detailcycle3.jsx'
 
 const router = createBrowserRouter([
   {
@@ -109,6 +112,18 @@ const router = createBrowserRouter([
   {
     path: '/cycle2detail',
     element : <DetailCycle2/>
+  },
+  {
+    path: '/login',
+    element : <LoginWithGoogleButton/>
+  },
+  {
+    path: '/cycle3',
+    element : <Cycle3/>
+  },
+  {
+    path: '/detailcycle3',
+    element : <DetailCycle3/>
   },
 ])
 

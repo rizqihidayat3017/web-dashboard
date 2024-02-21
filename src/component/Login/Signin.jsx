@@ -1,15 +1,13 @@
-
-
 const Signin = () => {
-    const handleLogin = (event) =>{
-        event.preventDefault();
-        localStorage.setItem('email', event.target.email.value)
-        localStorage.setItem('password', event.target.password.value)
-        console.log ('login')
-        window.location.href = "/dashboardv2"
-    }
+  const handleLogin = (event) => {
+    event.preventDefault();
+    localStorage.setItem("email", event.target.email.value);
+    localStorage.setItem("password", event.target.password.value);
+    console.log("login");
+    window.location.href = "/dashboardv2";
+  };
   return (
-    <div>
+    <div className="bg-white h-screen flex justify-center items-center">
       <main className="bg-white max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
         <div className="justify-between h-20 w-20">
           <img src="/images/logoFAMS.png" alt="Placeholder Image" />
@@ -23,9 +21,7 @@ const Signin = () => {
         <section className="mt-5">
           <form className="flex flex-col" method="POST" onSubmit={handleLogin}>
             <div className="mb-6 pt-3 rounded bg-gray-200">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2 ml-3"
-              >
+              <label className="block text-gray-700 text-sm font-bold mb-2 ml-3">
                 Email
               </label>
               <input
