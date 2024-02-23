@@ -88,7 +88,7 @@ function Demspray() {
                 meningkatkan pertumbuhan, kesehatan tanaman, dan hasil panen
                 jagung
               </p>
-              <Link>
+              <Link to="/cycle3">
                 <button className="mx-auto mt-5 text-white bg-customOrange border-0 py-2 px-8 focus:outline-none hover:bg-customOrangeplus rounded text-lg">
                   Details
                 </button>

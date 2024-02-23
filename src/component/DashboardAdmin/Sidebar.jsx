@@ -1,100 +1,223 @@
+// const handleLogout = () => {
+//   localStorage.removeItem("email");
+//   localStorage.removeItem("password");
+//   window.location.href = "/signin";
+// };
+// // eslint-disable-next-line react/prop-types
+// const Sidebar = ({ children }) => {
+//   return (
+//     <div className="h-[85vh] grid grid-cols-12 bg-gray-100 overflow-hidden ">
+//       <div className="hidden sm:flex flex-col bg-white col-span-2">
+//         <ul className="flex flex-col">
+//           <li>
+//             <a
+//               href="/dashboardv2"
+//               className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
+//             >
+//               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
+//                 <i className="bx bx-home" />
+//               </span>
+//               <span className="text-sm font-medium">Dashboard</span>
+//             </a>
+//           </li>
+//           <li>
+//             <a
+//               href="/pengajuancgrv2"
+//               className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
+//             >
+//               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
+//                 <i className="bx bx-user-check" />
+//               </span>
+//               <span className="text-sm font-medium">Pengajuan CGR</span>
+//             </a>
+//           </li>
+//           <li>
+//             <a
+//               href="/datacgrv2"
+//               className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
+//             >
+//               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
+//                 <i className="bx bx-user" />
+//               </span>
+//               <span className="text-sm font-medium">Data CGR</span>
+//             </a>
+//           </li>
+//           <li>
+//             <a
+//               href="/contractcgrv2"
+//               className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
+//             >
+//               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
+//                 <i className="bx bx-shopping-bag" />
+//               </span>
+//               <span className="text-sm font-medium">Contract CGR</span>
+//             </a>
+//           </li>
+//           <li>
+//             <a
+//               href="/coba3"
+//               className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
+//             >
+//               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
+//                 <i className="bx bx-bell" />
+//               </span>
+//               <span className="text-sm font-medium">E-contract</span>
+//             </a>
+//           </li>
+//           <li>
+//             <a
+//               href="/demsprey"
+//               className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
+//             >
+//               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
+//                 <i className="bx bx-drink" />
+//               </span>
+//               <span className="text-sm font-medium">Aktivitas</span>
+//             </a>
+//           </li>
+//           <li>
+//             <a
+//               href="#"
+//               className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
+//             >
+//               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
+//                 <i className="bx bx-chat" />
+//               </span>
+//               <span className="text-sm font-medium">Surat jalan</span>
+//             </a>
+//           </li>
+//           <li>
+//             <a className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+//               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
+//                 <i className="bx bx-log-out" />
+//               </span>
+//               <span className="text-sm font-medium" onClick={handleLogout}>
+//                 Logout
+//               </span>
+//             </a>
+//           </li>
+//         </ul>
+//       </div>
+//       <div className="w-full h-screen overflow-y-scroll border border-customOrangeplus col-span-10">
+//         {children}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Sidebar;
+
+import { Link } from "react-router-dom";
+
 const handleLogout = () => {
   localStorage.removeItem("email");
   localStorage.removeItem("password");
-  window.location.href = "/signin";
+  window.location.href = "/";
 };
+
 // eslint-disable-next-line react/prop-types
 const Sidebar = ({ children }) => {
   return (
-    <div className="h-[85vh] grid grid-cols-12 bg-gray-100 overflow-hidden ">
-      <div className="hidden sm:flex flex-col bg-white col-span-2">
+    <div className="h-[85vh] grid grid-cols-12 bg-gray-100 overflow-hidden">
+      <div className="hidden sm:flex flex-col  bg-white col-span-2">
         <ul className="flex flex-col">
           <li>
-            <a
-              href="/dashboardv2"
+            <Link
+              to="/dashboard"
               className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
             >
               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
                 <i className="bx bx-home" />
               </span>
               <span className="text-sm font-medium">Dashboard</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/pengajuancgrv2"
+            <Link
+              to="/pengajuancgr"
               className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
             >
               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
                 <i className="bx bx-user-check" />
               </span>
               <span className="text-sm font-medium">Pengajuan CGR</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/datacgrv2"
+            <Link
+              to="/datacgr"
               className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
             >
               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
                 <i className="bx bx-user" />
               </span>
               <span className="text-sm font-medium">Data CGR</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/contractcgrv2"
+            <Link
+              to="/contractcgr"
               className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
             >
               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
                 <i className="bx bx-shopping-bag" />
               </span>
               <span className="text-sm font-medium">Contract CGR</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/coba3"
+            <Link
+              to="/econtract"
               className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
             >
               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
-                <i className="bx bx-bell" />
+                <i className="bx bx-shopping-bag" />
               </span>
-              <span className="text-sm font-medium">E-contract</span>
-            </a>
+              <span className="text-sm font-medium">E-Contract</span>
+            </Link>
           </li>
           <li>
-            <a
-              href="/demsprey"
+            <Link
+              to="/dataaktivitas"
               className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
             >
               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
                 <i className="bx bx-drink" />
               </span>
               <span className="text-sm font-medium">Aktivitas</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              to="#"
               className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
             >
               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
                 <i className="bx bx-chat" />
               </span>
               <span className="text-sm font-medium">Surat jalan</span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+            <Link
+              to="/invoice"
+              className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800"
+            >
+              <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
+                <i className="bx bx-bell" />
+              </span>
+              <span className="text-sm font-medium">Memo pemotongan</span>
+            </Link>
+          </li>
+          <li>
+            <Link className="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
               <span className="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-400">
                 <i className="bx bx-log-out" />
               </span>
               <span className="text-sm font-medium" onClick={handleLogout}>
                 Logout
               </span>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
@@ -106,3 +229,4 @@ const Sidebar = ({ children }) => {
 };
 
 export default Sidebar;
+
