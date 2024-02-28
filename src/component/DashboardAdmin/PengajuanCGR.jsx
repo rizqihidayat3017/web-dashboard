@@ -1,7 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function PengajuanCGR() {
-  const pengajuanData = [
+  const [pengajuanData, setPengajuanData] = useState([
     {
       namaLengkap: "Rizqi Hidayat",
       kabupaten: "Ngawi",
@@ -9,6 +10,14 @@ function PengajuanCGR() {
       noRekening: "35215628299",
       NIK: "35215628299",
       status: "active",
+    },
+    {
+      namaLengkap: "Rizqi Hidayat",
+      kabupaten: "Ngawi",
+      kecamatan: "Geneng",
+      noRekening: "35215628299",
+      NIK: "35215628299",
+      status: "inactive",
     },
     {
       namaLengkap: "Rizqi Hidayat",
@@ -24,23 +33,7 @@ function PengajuanCGR() {
       kecamatan: "Geneng",
       noRekening: "35215628299",
       NIK: "35215628299",
-      status: "active",
-    },
-    {
-      namaLengkap: "Rizqi Hidayat",
-      kabupaten: "Ngawi",
-      kecamatan: "Geneng",
-      noRekening: "35215628299",
-      NIK: "35215628299",
-      status: "active",
-    },
-    {
-      namaLengkap: "Rizqi Hidayat",
-      kabupaten: "Ngawi",
-      kecamatan: "Geneng",
-      noRekening: "35215628299",
-      NIK: "35215628299",
-      status: "active",
+      status: "inactive",
     },
     {
       namaLengkap: "Rizqi Hidayat",
@@ -51,7 +44,20 @@ function PengajuanCGR() {
       status: "active",
     },
     // Masukkan data pengajuan lainnya di sini jika ada
-  ];
+  ]);
+
+  const handleDelete = (index) => {
+    const updatedData = [...pengajuanData];
+    updatedData.splice(index, 1);
+    setPengajuanData(updatedData);
+  };
+
+  // const handleApprove = (index) => {
+  //   const updatedData = [...pengajuanData];
+  //   updatedData[index].status = "approved";
+  //   setPengajuanData(updatedData);
+  // };
+
   return (
     <div>
       <div className="align-middle rounded-tl-lg rounded-tr-lg inline-block w-full py-4 overflow-hidden bg-white shadow-lg px-12">
@@ -140,10 +146,18 @@ function PengajuanCGR() {
                 <td className="px-6 py-4">{data.noRekening}</td>
                 <td className="px-6 py-4">{data.NIK}</td>
                 <td className="px-6 py-4">
-                  <span className="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
+                  <span
+                    className={`relative inline-block px-3 py-1 font-semibold leading-tight ${
+                      data.status === "active"
+                        ? "text-green-900"
+                        : "text-red-900"
+                    }`}
+                  >
                     <span
                       aria-hidden
-                      className="absolute inset-0 bg-green-200 opacity-50 rounded-full"
+                      className={`absolute inset-0 ${
+                        data.status === "active" ? "bg-green-200" : "bg-red-200"
+                      } opacity-50 rounded-full`}
                     />
                     <span className="relative text-xs">{data.status}</span>
                   </span>
@@ -156,18 +170,18 @@ function PengajuanCGR() {
                   </Link>
                 </td>
                 <td className="flex items-center px-6 py-4">
-                  <a
-                    href="#"
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                  <button
+                    onClick={() => handleDelete(index)}
+                    className="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-2 border border-green-500 rounded mr-2"
                   >
                     Approve
-                  </a>
-                  <a
-                    href="#"
-                    className="font-medium text-red-600 dark:text-red-500 hover:underline ms-3"
+                  </button>
+                  <button
+                    onClick={() => handleDelete(index)}
+                    className="ml-2 bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded"
                   >
-                    Remove
-                  </a>
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}
