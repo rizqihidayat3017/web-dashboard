@@ -43,6 +43,7 @@ function PengajuanCGR() {
       NIK: "35215628299",
       status: "active",
     },
+    
     // Masukkan data pengajuan lainnya di sini jika ada
   ]);
 

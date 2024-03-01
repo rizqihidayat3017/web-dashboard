@@ -28,6 +28,8 @@ import Cycle3 from "./component/DashboardAdmin/Cycle3/Cycle3.jsx";
 import DetailCycle3 from "./component/DashboardAdmin/Cycle3/Detailcycle3.jsx";
 import Econtractku from "./component/Econtract/Econtractku.jsx";
 import NewContractPages from "./Pages/New Contract/NewContractPages.jsx";
+import ContractConvertMbakS from "./component/DashboardAdmin/New Contract/ContractConvertMbakS.jsx";
+import DetailsDataCgr from "./component/DashboardAdmin/Detailscgr.jsx";
 
 const router = createBrowserRouter([
   {
@@ -138,6 +140,14 @@ const router = createBrowserRouter([
   {
     path: "/newcontractcgrv2",
     element: <NewContractPages />,
+  },
+  {
+    path: "/cobaconvert",
+    element: <ContractConvertMbakS />,
+  },
+  {
+    path: "/detailsdatacgr",
+    element: <DetailsDataCgr />,
   },
 ]);
 
